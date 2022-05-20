@@ -1,6 +1,6 @@
 import React from "react";
-import "./Login.css";
-import Food from "./food.jpg";
+import "../css/Login.css";
+import Food from "../Assets/food.jpg";
 import { TextField } from "@mui/material";
 const Login = () => {
   return (

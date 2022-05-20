@@ -1,7 +1,7 @@
 import React from "react";
-import "./signup.css";
-import Food from "./food.jpg";
-import { TextField } from "@mui/material";
+import "../css/signup.css";
+import Food from "../Assets/food.jpg";
+import TextField  from "@mui/material";
 const Signup = () => {
   return (
     <div>
