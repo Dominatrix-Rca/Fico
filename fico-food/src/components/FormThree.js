@@ -9,19 +9,19 @@ class FormTwo extends Component {
           className="flex flex-row w-10/12 h-12 mt-8 m-auto  items-center justify-around" 
         >
           <div className="bg-orange-500 w-2/12 shadow-md text-white h-5/6  text-center  rounded-md">
-            <p>Menu</p>
+            <h4>Menu</h4>
           </div>
           <div className=" w-2/12 border-2 shadow-md text-orange-400 h-5/6 text-center  rounded-md">
-            <p>Starter</p>
+            <h4>Starter</h4>
           </div>
           <div className=" w-2/12 border-2 shadow-md text-orange-400 h-5/6 text-center  rounded-md">
-            <p>Appetizer</p>
+            <h4>Appetizer</h4>
           </div>
           <div className=" w-2/12 border-2 shadow-md text-orange-400 h-5/6 text-center  rounded-md">
-            <p>Dessert</p>
+            <h4>Dessert</h4>
           </div>
           <div className=" w-2/12 border-2 shadow-md text-orange-400 h-5/6 text-center  rounded-md">
-            <p>Main</p>
+            <h4>Main</h4>
           </div>
         </div>
         <div className="h-5/6 mt-10 ml-16">

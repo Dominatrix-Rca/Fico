@@ -9,12 +9,12 @@ const Signup = () => {
       <div className="main">
         <div className="sub-main">
           <div className="photo">
-            <img src={Food} alt="no image" />
+            <img src={Food} alt="food" />
           </div>
 
           <div className="text">
             <h1> Create a new account</h1>
-            <p> Eat well and happily</p>
+            <p className="paras"> Eat well and happily</p>
             <div className="form">
               <div className="form12">
                 <div className="password">
@@ -50,7 +50,7 @@ const Signup = () => {
         <h1>
           <span>Fico-</span>Food
         </h1>
-        <p>Eat well and enjoy our fico-food</p>
+        <p className="paras">Eat well and enjoy our fico-food</p>
       </div>
     </div>
   );

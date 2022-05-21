@@ -14,7 +14,7 @@ const Login = () => {
           
           <div className="text">
             <h1> Welcome back again</h1>
-            <p> Eat well and happily</p>
+            <p className="paras"> Eat well and happily</p>
             <div className="form">
               <div className="form12">
               <div className="password">
@@ -40,7 +40,7 @@ const Login = () => {
       
       <div className="cover">
           <h1><span>Fico-</span>Food</h1>
-          <p>Eat well and enjoy and happily</p>
+          <p className="paras">Eat well and enjoy and happily</p>
       </div>
     </div>
   );
