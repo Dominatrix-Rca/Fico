@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/signup.css";
 import Food from "../Assets/food.jpg";
-import TextField  from "@mui/material";
+// import TextField  from "@mui/material";
 const Signup = () => {
   return (
     <div>
@@ -17,16 +17,16 @@ const Signup = () => {
             <div className="form">
               <div className="form12">
               <div className="password">
-                <TextField id="input" label="E-mail" variant="outlined" />
+                {/* <TextField id="input" label="E-mail" variant="outlined" /> */}
               </div>
               <div className="password">
-                <TextField id="input" label="phone" variant="outlined" />
+                {/* <TextField id="input" label="phone" variant="outlined" /> */}
               </div>
               <div className="password">
-                <TextField id="input" label="Password" variant="outlined" />
+                {/* <TextField id="input" label="Password" variant="outlined" /> */}
               </div>
               <div className="email">
-                <TextField id="input" label="confrim password" variant="outlined" />
+                {/* <TextField id="input" label="confrim password" variant="outlined" /> */}
               </div>
               <div className="name">
                 <button>SIGNUP</button>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Login.css";
 import Food from "../Assets/food.jpg";
-import { TextField } from "@mui/material";
+// import { TextField } from "@mui/material";
 const Login = () => {
   return (
     <div>
@@ -17,10 +17,10 @@ const Login = () => {
             <div className="form">
               <div className="form12">
               <div className="password">
-                <TextField id="input" label="E-mail" variant="outlined" />
+                {/* <TextField id="input" label="E-mail" variant="outlined" /> */}
               </div>
               <div className="password">
-                <TextField id="input" label="Password" variant="outlined" />
+                {/* <TextField id="input" label="Password" variant="outlined" /> */}
               </div>
               
               <div className="name">
