@@ -74,9 +74,9 @@ button{
     border-radius: 5px;
     width:475px;
     height: 49px;
-     color: #fff;
+    color: #fff;
 }
-.text  h1,p{
+.text  h1,.paras{
     font-family:'Courier New', Courier, monospace;
     position: relative;
     /* top: 50px; */
@@ -90,18 +90,15 @@ button{
     left: 8rem;
     font-size: 1.5rem;
     font-weight:bold;
-
 }
 .footer{
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
     position: relative;
     bottom: 20px;
-    
 }
 .footer span{
     color: #F08B34;
-   
 }
 .cover{
     width:640px;
@@ -112,7 +109,7 @@ button{
     left: 110px;
     bottom: 670px;
 }
-.cover h1,p{
+.cover h1,.paras{
     color: #fff;
     position: relative;
      top:200px;

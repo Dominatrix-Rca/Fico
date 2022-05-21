@@ -1,7 +1,8 @@
 import React from "react";
 import "../css/Login.css";
 import Food from "../Assets/food.jpg";
-import { TextField } from "@mui/material";
+import {TextField} from "@mui/material"
+import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div>
@@ -13,7 +14,7 @@ const Login = () => {
           
           <div className="text">
             <h1> Welcome back again</h1>
-            <p> Eat well and happily</p>
+            <p className="paras"> Eat well and happily</p>
             <div className="form">
               <div className="form12">
               <div className="password">
@@ -24,11 +25,11 @@ const Login = () => {
               </div>
               
               <div className="name">
-                <button>LOGIN</button>
+               <Link to="/"> <button>LOGIN</button></Link>
               </div>
               <div className="footer">
                 <h5>
-                 Don't have an account here? <span>Signup</span></h5>
+                 Don't have an account here? <Link to="/signup">Signup</Link></h5>
                  </div>
             
               </div>
@@ -39,7 +40,7 @@ const Login = () => {
       
       <div className="cover">
           <h1><span>Fico-</span>Food</h1>
-          <p>Eat well and enjoy and happily</p>
+          <p className="paras">Eat well and enjoy and happily</p>
       </div>
     </div>
   );
