@@ -9,10 +9,10 @@ const Client =()=>{
   <div>
     <div className="container">
       <div className="left-side">
-        <h1><span>Fico-</span>Food</h1>
+        <h1 className="h1"><span>Fico-</span>Food</h1>
       </div>
        <div className="right-side">
-       <h3>Client</h3>
+       <h3 className='h3'>Client</h3>
         <div className="content">
           <label className="label">Client</label><br></br>
           <input type="text" className="input" placeholder="Client Name"></input>

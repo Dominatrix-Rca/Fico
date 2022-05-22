@@ -15,9 +15,9 @@ class RestoInfo extends Component {
           </div>
           <div className="flex flex-col w-9/12 ">
             <h1 className="font-bold">Restaurant Information</h1>
-            <p className="text-gray-400">
+            <h4 className="text-gray-400">
               Restaurant name, details, address and owner
-            </p>
+           </h4>
           </div>
         </div>
 
@@ -28,9 +28,9 @@ class RestoInfo extends Component {
           
           <div className="flex flex-col w-9/12 ">
             <h1 className="font-bold">Restaurant Information</h1>
-            <p className="text-gray-400">
+            <h4 className="text-gray-400">
               Restaurant name, details, address and owner
-            </p>
+           </h4>
           </div>
         </div>
 
@@ -40,9 +40,9 @@ class RestoInfo extends Component {
           </div>
           <div className="flex flex-col w-9/12 ">
             <h1 className="font-bold">Restaurant Information</h1>
-            <p className="text-gray-400">
+            <h4 className="text-gray-400">
               Restaurant name, details, address and owner
-            </p>
+           </h4>
           </div>
         </div>
       </div>

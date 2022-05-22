@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../css/profilethree.css";
 import FormThree from "../components/FormThree";
 import RestoInfo from "../components/RestoInfo";
 import NavBar from "../components/navBar";
