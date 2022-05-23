@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/signup.css";
 import Food from "../Assets/food.jpg";
-import { Link} from "react-router-dom";
-import { TextField } from  "@mui/material";  
+import {TextField}  from "@mui/material";
+import { Link } from "react-router-dom"
 const Signup = () => {
   return (
     <div>
