@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Menu from "./pages/Menu";
 import ProfileThree from "./pages/ProfileThree";
 import Order from './pages/Order';
+import Overview from "./pages/OverView-E";
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/orders" element={<Order />} />
+        <Route path="/overview" element={<Overview />} />
         {/* <Route path="/client" element={<Client />} /> */}
         <Route path="/profile3" element={<ProfileThree />} />
         <Route path="/login"  element={<Login />} />
