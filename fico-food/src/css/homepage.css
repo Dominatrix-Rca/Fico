@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    background-color: rgb(9, 8, 8);
+    height: 500px;
+}
+.image img{
+    float: right;
+    height: 250px;
+    padding-right: 50px;
+
+}
+.intro{
+    text-align: center;
+    /* padding-right: 150px; */
+    /* margin-top: 100px; */
+}
+.intro p{
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+.buttons{
+    justify-content: center;
+    display: flex;
+    padding: 40px;
+}
+.intro h1{
+    padding-top: 30px;
+    color: white;
+}
+.button-1{
+    margin-top: 150px;
+}
+.button-2{
+    margin-top: 150px;
+}
+.button-1 button{
+    padding: 15px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    height: 55px;
+    width: 400px;
+    font-size: 15px;
+}
+.button-1 button:hover{
+    background-color: white;
+    color: black;
+}
+.button-2 button{
+    padding: 15px;
+    margin-left: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 55px;
+    width: 400px;
+    font-size: 15px;
+}
+.three{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    column-gap: 200px;
+    background-color: rgb(173, 216, 230,0.2);
+    padding-bottom: 50px;
+}
+.three div{
+    background-color: white;
+    border: 0.5px solid ;
+    width: 250px;
+    height: 350px;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+.three img{
+    height: 167px;
+}
+.three h1{
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.three p{
+    padding-top: 25px;
+    padding-left: 10px;
+}
+.three span{
+    display: grid;
+}
