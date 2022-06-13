@@ -5,33 +5,40 @@ import { TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 const Signup = () => {
-const api = axios.create({
-  baseURL:'https://backend.supamenu.rw'
+  const api = axios.create({
+    baseURL:'https://backend.supamenu.rw'
+  })
+let [account,setAccount] = useState({
+  email:"",
+  password:"",
+  phone:""
 })
-
-const[email,setEmail] = useState("");
-const[password,setPassword] = useState("");
-const loginHandler = (event)=>{
-event.preventDefault();
-const data = {
-  email:email,
-  password:password,
+const handleSignUp = (e)=>{
+  e.preventDefault();
+  api.post("/supapp/api/auth/admin/signup",{
+    "mobile":account.phone,
+    "email":account.email,
+    "firstName":"Muhire",
+    "lastName":"Ighor",
+    "password":account.password
+  })
+  .then(function (response){
+    console.log(response)
+    localStorage.setItem("accessToken",response.data.token.accessToken);
+    localStorage.setItem("refreshToken",response.data.token.refreshToken);
+  })
+  .catch(function (error){
+    const message = error.response.data.apierror.message
+    JSON.stringify(message)
+  })
 }
-api.post("/supapp/api/auth/signin",{
-  "login":email,
-  "password":password
-})
-.then(function (response){
-  localStorage.setItem("accessToken",response.data.token.accessToken);
-  localStorage.setItem("refreshToken",response.data.token.refreshToken);
-
-  
-})
-.catch(function (error){
-  const message = error.response.data.apierror.message
-  JSON.stringify(message)
-})
+const handleChange = ({currentTarget:input})=>{
+  let account1 = {...account};
+  account1[input.name] = input.value
+  account = account1;
+  setAccount({account});
 }
+let {phone,email,password} = account;
   return (
     <div>
       <div className="main1">
@@ -46,23 +53,25 @@ api.post("/supapp/api/auth/signin",{
             <div >
               <div className="form12">
                 <div className="password">
-                  <TextField id="input" label="E-mail" variant="outlined" />
+                  <TextField id="input" onChange={handleChange} label="E-mail" value={email} variant="outlined" />
                 </div>
                 <div className="password">
-                  <TextField id="input" label="phone" variant="outlined" />
+                  <TextField id="input" onChange={handleChange} label="phone" value={phone} variant="outlined" />
                 </div>
                 <div className="password">
-                  <TextField id="input" label="Password" variant="outlined" />
+                  <TextField id="input" onChange={handleChange} label="Password" value={password} variant="outlined" />
                 </div>
                 <div className="email">
                   <TextField
                     id="input"
+                    onChange={handleChange}
+                    value={password}
                     label="confrim password"
                     variant="outlined"
                   />
                 </div>
                 <div className="signup">
-                  <Link to="/"><button className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg ">SIGN UP</button></Link>
+                  <Link to="/"><button className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg " onClick={handleSignUp}>SIGN UP</button></Link>
                 </div>
                 <div className="footer">
                   <h5 className="ml-32">
