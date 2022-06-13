@@ -11,6 +11,7 @@ function Links({icon,label,classn}){
         <div className={classn}>
             <div>{icon}</div>
             
+            
            <Link to ={`/${label.toLowerCase()}`} ><li className='list-none'>{label}</li></Link> 
         </div>
     )
