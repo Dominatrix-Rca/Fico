@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div>
-      <div className="main">
+      <div className="main1">
         <div className="sub-main">
           <div className="photo">
             <img src={Food} alt="no image" />
@@ -24,8 +24,8 @@ const Login = () => {
                 <TextField id="input" label="Password" variant="outlined" />
               </div>
               
-              <div className="name">
-               <Link to="/"> <button>LOGIN</button></Link>
+              <div className="login">
+               <Link to="/"> <button className="button">LOGIN</button></Link>
               </div>
               <div className="footer">
                 <h5>

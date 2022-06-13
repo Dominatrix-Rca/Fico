@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const Signup = () => {
   return (
     <div>
-      <div className="main">
+      <div className="main1">
         <div className="sub-main">
           <div className="photo">
             <img src={Food} alt="food" />
@@ -33,7 +33,7 @@ const Signup = () => {
                     variant="outlined"
                   />
                 </div>
-                <div className="name">
+                <div className="signup">
                 <Link to="/"><button>SIGNUP</button></Link>
                 </div>
                 <div className="footer">
