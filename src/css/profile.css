@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* column-gap: 20px; */
+    justify-content: center;
+}
+.left{
+    /* border: 0.5px solid gray; */
+    margin-top: 40px;
+}
+
+.logo h1{
+    color: black;
+    padding-left: 25px;
+    font-size: 2.5em;
+}
+.logo span{
+    color: orange;
+}
+
+
+.intro1{
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    height: 520px;
+    width: 350px;
+    /* padding-left: 80px; */
+    padding-top: 40px;
+    margin-top: 30px;
+}
+.intro1 .one{
+    background-color: gray !important;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 500px;
+    width: 50px;
+    height: 35px;
+    justify-content: center;
+    padding-top: 15px;
+    margin-top: 10px;
+    color: white;
+}
+.intro1 .one:hover{
+    background-color: orange;
+    
+}
+
+
+.intro1 .two{
+    margin-left: 25px;
+}
+
+
+.intro1 .two .span-one{
+    font-weight: bolder ;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.intro1 .two .span-two{
+    font-weight: normal ;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.intro1 .two .span-three{
+    font-weight: normal ;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.intro1 h3{
+    padding-left: 100px;
+    padding-bottom: 20px;
+    display: grid;
+}
+.intro1 ul{
+    list-style: none;
+}
+
+.intro1 li{
+    padding: 30px;
+    display: flex;
+    font-weight: bold;
+}
+.intro1 li:hover{
+    border-left: 5px solid orange;
+}
+.intro1 p{
+    margin-bottom: 10px;
+}
+.intro1 p span{
+    display: grid;
+    font-weight: normal;
+    /* margin-top: 12px; */
+}
+.profile{
+     margin-top: 20px;
+}
+
+.profile img{
+    /* height: 100px; */
+    border-radius: 100px;
+    border: 1px solid gray;
+    width: 70px;
+    height: 70px;
+    float: right;
+    margin-right: 50px;
+
+}
+.profile h3{
+    float: right;
+    margin-right: 10px;
+    border-left: 0.5px solid gray;
+    margin-top: 10px;
+    padding: 15px;
+}
+.profile img:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+.form{
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    height:480px;
+    width: 500px;
+    padding-left: 20px;
+    padding-top: 40px;
+    margin-left: 20px;
+    margin-top: 150px; 
+    /* space to be occupied by another div */
+    /* margin-right: 20px; */
+}
+.form input{
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding: 15px;
+    width: 400px;
+    height: 10px; 
+    border-radius: 10px;
+    border: 0.5px solid gray;
+}
+
+.form .owner{
+    width: 200px;
+}
+.bell, .search{
+    float: right;
+    margin-right: 40px;
+    margin-top: 30px;
+    font-size: 1.3em;
+    color: orange;
+}
+
+.bell:hover, .search:hover{
+    color: black;
+}
