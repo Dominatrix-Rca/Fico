@@ -31,11 +31,7 @@ api.post("/supapp/api/auth/signin",{
   const message = error.response.data.apierror.message
   JSON.stringify(message)
 })
-
-
 }
-
-
   return (
     <div>
       <div className="main1">
