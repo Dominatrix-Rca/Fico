@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.main2{
+    background-color: black;
+}
+.image{
+    height: 80px;
+}
+.image img{
+    height: 500px;
+    float: right;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.container h1{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 50px;
+    text-transform: capitalize;
+    color: white;
+}
+.container p{
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: white;
+}
+.intro p{
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+.guide h1{
+    background-color: rgb(236, 243, 246);
+    border-bottom: 1px solid gray;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+
+
+.buttons{
+    /* justify-content: center; */
+    display: flex;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+.intro h1{
+    font-size: 2.2em;
+    padding-top: 30px;
+    color: white;
+}
+.button-1{
+    margin-top: 100px;
+}
+.button-2{
+  margin-top: 100px;
+}
+.button-1 button{
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    height: 55px;
+    width: 400px;
+    font-size: 15px;
+}
+.button-1 button:hover{
+    background-color: white;
+    color: black;
+}
+.button-2 button{
+    padding: 15px;
+    margin-left: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 55px;
+    width: 400px;
+    font-size: 15px;
+}
+.button-2 button:hover{
+    background-color: white;
+    color: black;
+}
+.three{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    column-gap: 150px;
+    background-color: rgb(236, 243, 246);
+    padding-bottom: 50px;
+}
+.three div{
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 350px;
+    height: 450px;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+.three img{
+    height: 250px;
+    border-radius: 10px;
+}
+.three h1{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: bolder;
+    font-size: 2em;
+}
+.three p{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.three span{
+    display: grid;
+}
