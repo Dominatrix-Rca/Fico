@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdAddBox } from "react-icons/md";
 import { BsCircle } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
+import {Axios, axios} from "axios"
 import { MdOutlineNotificationAdd } from "react-icons/md";
 import { GoPerson } from "react-icons/go";
 import { BsCheckCircleFill } from "react-icons/bs";
 import pic from "../Assets/food.jpg";
 import Sidebar from "../components/Sidebar";
 const buttons = ["Drink", "Starter", "Appetizer", "Dessert", "Main"];
+const api =  Axios.createAPI({
+  baseUrl: "https://backend.supamenu.rw"
+})
 const box = [
   {
     items: ["kaffir", "vodka", "Lemongrass", "Ginger", "citrus"],
@@ -38,6 +42,13 @@ const box = [
 const recipes = ["Desert", "Main", "Drink", "Appetizer", "Starter"];
 
 function Menu() {
+  useEffect(() => {
+    api.get("/api/menu-items")
+     .then(function (response) {
+      box = response.data;
+      console.log(response.data)
+     })
+    },[])
   return (
     <div className="flex flex-row h-screen w-full bg-white ">
       <Sidebar />
