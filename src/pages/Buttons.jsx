@@ -10,7 +10,7 @@ function Buttons({activity}){
 
         {buttons.map((btn, index) => {
             return(
-                <button className={btn===activity?activeclass:inactiveclass}>{btn}</button>
+                <button key={index} className={btn===activity?activeclass:inactiveclass}>{btn}</button>
             )
         })}
 
