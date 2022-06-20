@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 const Signup = () => {
   const api = axios.create({
-    baseURL:'https://backend.supamenu.rw'
+    baseURL:'https://backend.supamenu.rw/supapp'
   })
 let [account,setAccount] = useState({
   email:"",
@@ -15,7 +15,7 @@ let [account,setAccount] = useState({
 })
 const handleSignUp = (e)=>{
   e.preventDefault();
-  api.post("/supapp/api/auth/admin/signup",{
+  api.post("/api/auth/admin/signup",{
     "mobile":account.phone,
     "email":account.email,
     "firstName":"Muhire",
@@ -23,20 +23,24 @@ const handleSignUp = (e)=>{
     "password":account.password
   })
   .then(function (response){
-    console.log(response)
+    // console.log(account.phone)
+    console.log(response);
     localStorage.setItem("accessToken",response.data.token.accessToken);
     localStorage.setItem("refreshToken",response.data.token.refreshToken);
   })
   .catch(function (error){
-    const message = error.response.data.apierror.message
-    JSON.stringify(message)
+    // const message = error.response.data.apierror.message;
+    console.log(error);
+    // JSON.stringify(message)
   })
 }
 const handleChange = ({currentTarget:input})=>{
   let account1 = {...account};
+  // console.log(account1);
   account1[input.name] = input.value
   account = account1;
-  setAccount({account});
+  setAccount(account);
+  // console.log(account);
 }
 let {phone,email,password} = account;
   return (
@@ -46,6 +50,8 @@ let {phone,email,password} = account;
           <div className="photo">
             <img src={Food} alt="food" />
           </div>
+          <form onSubmit={(e)=>{
+            handleSignUp(e)}}>
 
           <div className="text">
             <h1> Create a new account</h1>
@@ -53,13 +59,13 @@ let {phone,email,password} = account;
             <div >
               <div className="form12">
                 <div className="password">
-                  <TextField id="input" onChange={handleChange} label="E-mail" value={email} variant="outlined" />
+                  <TextField id="input" onChange={handleChange} name="email"  label="E-mail" value={email} variant="outlined" />
                 </div>
                 <div className="password">
-                  <TextField id="input" onChange={handleChange} label="phone" value={phone} variant="outlined" />
+                  <TextField id="input" onChange={handleChange}  name="phone" label="phone" value={phone} variant="outlined"  />
                 </div>
                 <div className="password">
-                  <TextField id="input" onChange={handleChange} label="Password" value={password} variant="outlined" />
+                  <TextField id="input" onChange={handleChange} label="Password" name="password" value={password} variant="outlined" type="password" />
                 </div>
                 <div className="email">
                   <TextField
@@ -68,10 +74,12 @@ let {phone,email,password} = account;
                     value={password}
                     label="confrim password"
                     variant="outlined"
+                    type="password"
+                    name="password"
                   />
                 </div>
                 <div className="signup">
-                  <Link to="/"><button className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg " onClick={handleSignUp}>SIGN UP</button></Link>
+                  <input className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg " type="submit" value="SignUp" />
                 </div>
                 <div className="footer">
                   <h5 className="ml-32">
@@ -81,6 +89,8 @@ let {phone,email,password} = account;
               </div>
             </div>
           </div>
+          </form>
+
         </div>
       </div>
       <div className="cover">

@@ -7,16 +7,16 @@ import axios from 'axios';
 
 const Login = () => {
   const api = axios.create({
-    baseURL:'https://backend.supamenu.rw'
+    baseURL:'https://backend.supamenu.rw/supapp'
   })
   
   let[account,setAccount] = useState({email:"",password:""});
   const handleChange = ({currentTarget:input}) =>{
-       console.log(input.name)
+      //  console.log(input.value)
        let account1 = {...account};
        account1[input.name] = input.value
        account = account1
-       setAccount({account})
+       setAccount(account)
   }
   const loginHandler = (event)=>{
   event.preventDefault();
@@ -24,19 +24,22 @@ const Login = () => {
   //   email:account.email,
   //   password:account.password,
   // }
-  api.post("/supapp/api/auth/signin",{
+  api.post("/api/auth/signin",{
     "login":account.email,
     "password":account.password
-  })
+  },{"content-type":"application/json"})
   .then(function (response){
+    console.log(response);
     localStorage.setItem("accessToken",response.data.token.accessToken);
     localStorage.setItem("refreshToken",response.data.token.refreshToken);
   })
   .catch(function (error){
-    const message = error.response.data.apierror.message
+    console.log(error);
+    const message = error.response.data.apierror.message;
     JSON.stringify(message)
   })
   }
+  
   return (
     <div>
       <div className="main1">
@@ -50,21 +53,29 @@ const Login = () => {
             <p className="paras"> Eat well and happily</p>
             <div>
               <div className="form12">
+                <form onSubmit={(e)=>{
+                  loginHandler(e)}}>
+
+
+
+
               <div className="password">
                 <TextField id="input" name="email" label="E-mail" value={account.email} variant="outlined" onChange={handleChange} />
               </div>
               <div className="password">
-                <TextField id="input" name="password" value={account.password} label="Password" variant="outlined" onChange={handleChange} />
+                <TextField id="input" name="password"   value={account.password} label="Password" variant="outlined" onChange={handleChange} />
               </div>
               
               <div className="login">
-               <Link to="/overview"> <button className="button" onClick={loginHandler}>LOGIN</button></Link>
+              <input className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg " type="submit" value="Login" />
               </div>
               <div className="footer">
                 <h5 className="ml-32">
                  Don't have an account here? <Link to="/signup" className="text-orange-400 hover:underline hover:cursor-pointer">Signup</Link></h5>
                  </div>
             
+
+                </form>
               </div>
             </div>
           </div>

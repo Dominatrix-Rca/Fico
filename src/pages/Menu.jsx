@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { MdAddBox } from 'react-icons/md';
 import { FiSearch } from 'react-icons/fi';
 import { MdOutlineNotificationAdd } from 'react-icons/md';
@@ -17,12 +17,10 @@ import axios from 'axios';
 //         })
         
 
-async function getUser(){
-    const data = await axios.get('https://backend.supamenu.rw/api/menu-items');
-    const items = await data.json();
-    console.log(items);
-}
-getUser();
+const api = axios.create({
+    baseURL:"https://backend.supamenu.rw/supapp"
+});
+
 
 
 
@@ -50,7 +48,7 @@ export const box = [{
     selected: 'Singapore Sling-12.5',
     amount: 'FRW 5,000',
     status:"Dessert"
-
+    
 },
 {
     items: ['Gin', 'Grenadine', 'Citrus', 'Cucumber'],
@@ -68,6 +66,28 @@ const recipes = ['Desert', 'Main', 'Drink', 'Appetizer', 'Starter'];
 
 
 function Menu() {
+    
+    const getMenu=()=>{
+    
+        const data = api.get("/api/menu-items")
+        data.then((response)=>{
+            console.log(response);
+         
+            
+        })
+        data.catch((error)=>{
+            console.log(error);
+        });
+        let answer = data;
+        console.log(answer);
+        answer.map((ans,index)=>{
+            // console.log(ans);   
+            
+        })
+
+    }
+   
+    
     return (
         <div className='flex flex-row h-screen w-full bg-white  px-2'>
             <Sidebar active="Menu" />
