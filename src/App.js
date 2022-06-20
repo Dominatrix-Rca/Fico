@@ -15,7 +15,7 @@ import Clientfun from './pages/clientJoin';
 
 function App() {
   return (
-    <BrowserRouter basename='/fico'>
+    <BrowserRouter >
         <Routes >
           <Route index element={<Homepage />} />
           <Route path='/clients' element={<Clientfun />} />

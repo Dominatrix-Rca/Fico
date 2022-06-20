@@ -2,14 +2,14 @@ import React,{useState} from "react";
 import "../css/Login.css";
 import Food from "../Assets/food.jpg";
 import {TextField} from "@mui/material"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
   const api = axios.create({
     baseURL:'https://backend.supamenu.rw/supapp'
   })
-  
+  const navigate = useNavigate()
   let[account,setAccount] = useState({email:"",password:""});
   const handleChange = ({currentTarget:input}) =>{
       //  console.log(input.value)
@@ -17,26 +17,27 @@ const Login = () => {
        account1[input.name] = input.value
        account = account1
        setAccount(account)
+       console.log(account)
+ 
   }
   const loginHandler = (event)=>{
   event.preventDefault();
-  // const data = {
-  //   email:account.email,
-  //   password:account.password,
-  // }
+  console.log(account)
   api.post("/api/auth/signin",{
     "login":account.email,
     "password":account.password
   },{"content-type":"application/json"})
   .then(function (response){
-    console.log(response);
+    console.log(response.data)
     localStorage.setItem("accessToken",response.data.token.accessToken);
+    localStorage.setItem("userData",JSON.stringify(response.data))
+    // console.log(JSON.parse(localStorage.getItem("userData")).firstName)
     localStorage.setItem("refreshToken",response.data.token.refreshToken);
+    navigate("/overview")
   })
   .catch(function (error){
     console.log(error);
-    const message = error.response.data.apierror.message;
-    JSON.stringify(message)
+    // JSON.stringify(message)
   })
   }
   
@@ -53,12 +54,7 @@ const Login = () => {
             <p className="paras"> Eat well and happily</p>
             <div>
               <div className="form12">
-                <form onSubmit={(e)=>{
-                  loginHandler(e)}}>
-
-
-
-
+                <form onSubmit={(e) => loginHandler(e)}>
               <div className="password">
                 <TextField id="input" name="email" label="E-mail" value={account.email} variant="outlined" onChange={handleChange} />
               </div>
@@ -67,20 +63,18 @@ const Login = () => {
               </div>
               
               <div className="login">
-              <input className="bg-orange-400 border-2 border-orange-400 w-3/4 h-12 text-white rounded-lg " type="submit" value="Login" />
+             <input type="submit" className="button text-center" value="LOGIN"/>
               </div>
+              </form>
               <div className="footer">
                 <h5 className="ml-32">
                  Don't have an account here? <Link to="/signup" className="text-orange-400 hover:underline hover:cursor-pointer">Signup</Link></h5>
                  </div>
-            
-
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
       
       <div className="cover">
           <h1><span>Fico-</span>Food</h1>
