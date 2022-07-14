@@ -13,7 +13,7 @@ function Sidebar({active}){
     const activeClass = "flex flex-row text-white space-x-8 ml-8  items-center text-xl text-center font-sansserif font-semibold  mt-1 hover:border-l-4 border-orange-300 hover:cursor-pointer border-l-4 border-orange-500";
     const overViewclass = "flex flex-row space-x-8 ml-8 items-center text-gray-600 text-xl text-center font-sansserif font-semibold  mt-1 hover:border-l-2 border-orange-300 hover:cursor-pointer";
     return (
-        <div className='  w-1/6 bg-black h-screen fixed rounded-xs'>
+        <div className=' xl:w-1/6 sm:w-[150px]  bg-black h-screen fixed rounded-xs'>
         <p className="flex flex-row justify-start ml-4 items-center pt-12 ">
             <span className="text-orange-400 text-2xl font-bold tracking-wider">Fico-</span>
             <span className=" text-white text-2xl font-bold tracking-wider">Food</span>
